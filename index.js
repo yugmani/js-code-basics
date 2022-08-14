@@ -1,6 +1,10 @@
 // Import stylesheets
 import './style.css';
 
+// *************************************************
+// 3 Easy Ways to Swap 2 Array Elements in JavaScript
+// **************************************************
+
 // 1. Temporary Variable
 function swapElements(arr, i1, i2) {
   let temp = arr[i1];
@@ -39,3 +43,28 @@ const arr3 = [1, 2, 3, 4];
 
 swapBySplice(arr3, 0, 3);
 console.log(arr3);
+
+// **********************************************************
+// How to Remove an Element from an Array by ID in JavaScript
+// **********************************************************
+
+const arr = [
+  { id: 1, name: 'John' },
+  { id: 2, name: 'Peter' },
+  { id: 3, name: 'Kate' },
+];
+
+function removeObjectWithId(arr, id) {
+  const objWithIdIndex = arr.findIndex((obj) => obj.id === id);
+
+  arr.splice(objWithIdIndex, 1);
+
+  return arr;
+}
+
+console.log(removeObjectWithId(arr, 2));
+/* const arr = [
+  { id: 1, name: 'John' },
+  { id: 2, name: 'Peter' },  
+];
+*/
