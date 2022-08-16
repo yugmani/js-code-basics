@@ -68,3 +68,40 @@ console.log(removeObjectWithId(arr, 2));
   { id: 2, name: 'Peter' },  
 ];
 */
+
+//Avoiding Side Effects
+// **********************
+
+function removeObjWithoutSideEffect(arr, id) {
+  //Making a copy with the Array.from() method
+  const arrCopy = Array.from(arr);
+
+  const objWithIdIndex = arrCopy.findIndex((obj) => obj.id === id);
+  arrCopy.splice(objWithIdIndex, 1);
+
+  return arrCopy;
+}
+
+const arr4 = [
+  { id: 1, name: 'John' },
+  { id: 2, name: 'Peter' },
+  { id: 3, name: 'Kate' },
+];
+
+const resultArr = removeObjWithoutSideEffect(arr4, 2);
+console.log(resultArr);
+/*
+[
+  { id: 1, name: 'John' },
+  { id: 2, name: 'Peter' },
+]
+*/
+
+console.log(arr4);
+/*
+ [
+  { id: 1, name: 'John' },
+  { id: 2, name: 'Peter' },
+  { id: 3, name: 'Kate' },
+];
+*/
