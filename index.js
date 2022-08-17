@@ -126,3 +126,13 @@ console.log(removeObjectByFilter(arr5, 2));
   { id: 3, name: 'Kate' },
 ]
 */
+
+//no side effects: original array is not modified
+console.log(arr5);
+/*
+[
+  { id: 1, name: 'John' },
+  { id: 2, name: 'Peter' },
+  { id: 3, name: 'Kate' },
+];
+*/
