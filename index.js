@@ -65,7 +65,7 @@ function removeObjectWithId(arr, id) {
 console.log(removeObjectWithId(arr, 2));
 /* const arr = [
   { id: 1, name: 'John' },
-  { id: 2, name: 'Peter' },  
+  { id: 3, name: 'Kate' },  
 ];
 */
 
@@ -93,7 +93,7 @@ console.log(resultArr);
 /*
 [
   { id: 1, name: 'John' },
-  { id: 2, name: 'Peter' },
+  { id: 3, name: 'Kate' },
 ]
 */
 
@@ -104,4 +104,25 @@ console.log(arr4);
   { id: 2, name: 'Peter' },
   { id: 3, name: 'Kate' },
 ];
+*/
+
+// The Array filter() Method
+// *****************************
+
+function removeObjectByFilter(arr, id) {
+  return arr.filter((item) => item.id != id);
+}
+
+const arr5 = [
+  { id: 1, name: 'John' },
+  { id: 2, name: 'Peter' },
+  { id: 3, name: 'Kate' },
+];
+
+console.log(removeObjectByFilter(arr5, 2));
+/*
+[
+  { id: 1, name: 'John' },
+  { id: 3, name: 'Kate' },
+]
 */
